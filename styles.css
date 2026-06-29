@@ -728,6 +728,90 @@ body:not(.light-mode) .github-chart {
    Work List (Featured Publications)
    =========================== */
 
+/* Company grouping (Experience) */
+.company-group {
+    /* Strong separation BETWEEN companies */
+    margin-bottom: 5rem;
+    /* Nest a company's roles under a shared vertical spine */
+    padding-left: 1.5rem;
+    border-left: 2px solid rgba(255, 255, 255, 0.08);
+}
+
+.company-group:last-child {
+    margin-bottom: 0;
+}
+
+body.light-mode .company-group {
+    border-left-color: rgba(0, 0, 0, 0.08);
+}
+
+.company-name {
+    color: var(--color-function);
+    font-size: var(--text-xl);
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.light-mode .company-name {
+    border-bottom-color: rgba(0, 0, 0, 0.1);
+}
+
+.company-tenure {
+    color: var(--text-dim);
+    font-size: var(--text-sm);
+    margin-bottom: 1.5rem;
+}
+
+/* Roles within the same company sit close together */
+.company-group .experience-item {
+    margin-bottom: 1.25rem;
+}
+
+.company-group .experience-item:last-child {
+    margin-bottom: 0;
+}
+
+.exp-dates {
+    color: var(--color-comment);
+    font-size: var(--text-sm);
+    margin-top: 0.15rem;
+}
+
+/* Key achievement badges nested under a company */
+.company-achievements {
+    margin-bottom: 1.75rem;
+}
+
+/* Featured writing links under a company */
+.featured-posts {
+    margin-top: 1.25rem;
+}
+
+.featured-list {
+    list-style: none;
+    margin: 0.5rem 0 0;
+    padding: 0;
+}
+
+.featured-list li {
+    margin-bottom: 0.4rem;
+    font-size: var(--text-sm);
+    line-height: 1.5;
+}
+
+/* Blog post company sub-headers */
+.work-company {
+    font-size: var(--text-lg);
+    margin-top: 0.5rem;
+    margin-bottom: -0.5rem;
+}
+
+.work-company:first-child {
+    margin-top: 0;
+}
+
 .work-list {
     display: flex;
     flex-direction: column;
