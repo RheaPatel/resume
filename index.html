@@ -34,6 +34,7 @@
                 <div class="window-tabs" role="navigation" aria-label="Portfolio sections">
                     <a class="tab active" href="#about" data-section="about">about.md</a>
                     <a class="tab" href="#experience" data-section="experience">work_experience.md</a>
+                    <a class="tab" href="#projects" data-section="projects">projects.md</a>
                     <a class="tab" href="#personal" data-section="personal">personal.txt</a>
                     <a class="tab" href="#contact" data-section="contact">contact.txt</a>
                 </div>
@@ -86,7 +87,12 @@
 
                         <div class="section">
                             <span class="comment"># ABOUT</span>
-                            <p class="text">Product leader with 6+ years of PM experience building <span class="highlight">AI-powered developer tools</span>. Now at <span class="highlight">NVIDIA</span>, building AI for the hardware powering the world's most advanced systems. Previously at GitHub and Microsoft, where I led GitHub Copilot for Visual Studio, owning the vision for Agents, Chat, and model strategy, and orchestrating 40+ engineers, researchers, and designers. I drive zero-to-one environments, move fast under ambiguity, and pair deep user empathy with a data-driven product mindset. I operate as a "firefighter" PM who unblocks teams, drives clarity, and builds strong cross-functional partnerships. Keynote speaker, and public advocate for developer AI, with a track record of scaling adoption to <span class="highlight">7M+ developers</span> and shaping how LLMs integrate into software.</p>
+                            <p class="text">Product leader building AI from the silicon up — now at <span class="highlight">NVIDIA</span>, previously <span class="highlight">GitHub Copilot</span> and <span class="highlight">Microsoft</span>, where I scaled Copilot to <span class="highlight">7M+ developers</span>. I still ship my own products on the side.</p>
+                            <div class="resume-cta-wrap">
+                                <a href="mailto:rheapatel23@gmail.com?subject=Can%20I%20see%20your%20resume%3F&amp;body=Hi%20Rhea%2C%20I'd%20love%20to%20take%20a%20look%20at%20your%20resume." class="resume-cta">
+                                    <span aria-hidden="true">📄</span> Request my resume
+                                </a>
+                            </div>
                         </div>
 
                         <div class="section">
@@ -273,6 +279,189 @@
                                 <p class="edu-major">Software Development & Business Information Systems</p>
                                 <p class="edu-activities">MAC, Cofounder Software Engineering Society</p>
                             </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Projects Section -->
+                <section class="page-section" id="projects">
+                    <div class="command-line">
+                        <span class="prompt">rhea@portfolio</span>
+                        <span class="path">~</span>
+                        <span class="dollar">$</span>
+                        <span class="command">ls -la ~/projects</span>
+                    </div>
+
+                    <div class="output">
+                        <span class="comment"># Things I'm Building</span>
+                        <p class="text" style="margin-bottom: 2rem;">Most of my product instincts come from building my own things end-to-end. Here's what I'm working on right now — most are public on <a href="https://github.com/RheaPatel" target="_blank" class="link">GitHub</a>.</p>
+
+                        <div class="project-grid">
+
+                            <article class="project-card">
+                                <div class="project-preview" style="--p1:#1d976c; --p2:#2fd8a4;">
+                                    <div class="preview-bar">
+                                        <span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-dot"></span>
+                                        <span class="preview-url">mytodo-three-beryl.vercel.app</span>
+                                    </div>
+                                    <div class="preview-body"><span class="preview-emoji">🌱</span><span class="preview-name">RheaApp</span></div>
+                                </div>
+                                <div class="project-body">
+                                    <div class="project-head">
+                                        <h3 class="project-title">RheaApp</h3>
+                                        <span class="project-status live">● Live · ongoing</span>
+                                    </div>
+                                    <p class="project-tagline">A personal wellness OS I built for myself.</p>
+                                    <p class="project-desc">Tracking how I'm actually doing — physically and mentally — was scattered across a dozen apps, so I built one. RheaApp logs my calories and macros, pulls to-dos straight out of my inbox, syncs my Google and Apple calendars, and tracks mood, sleep, workouts, and meds. Then it surfaces the stats and correlations so I can see what's working, what's slipping, and what to focus on in my personal life. Voice input and email parsing run on Claude.</p>
+                                    <div class="project-tags">
+                                        <span class="tag">React</span>
+                                        <span class="tag">Neon Postgres</span>
+                                        <span class="tag">Claude</span>
+                                        <span class="tag">PWA</span>
+                                    </div>
+                                    <div class="project-footer">
+                                        <a href="https://mytodo-three-beryl.vercel.app" target="_blank" class="project-link primary">Open the live app →</a>
+                                        <span class="project-updated">Updated Jun 2026</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="project-card">
+                                <div class="project-preview" style="--p1:#3a7bd5; --p2:#00d2ff;">
+                                    <div class="preview-bar">
+                                        <span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-dot"></span>
+                                        <span class="preview-url">meds-tracker-theta.vercel.app</span>
+                                    </div>
+                                    <div class="preview-body"><span class="preview-emoji">💊</span><span class="preview-name">FillFinder</span></div>
+                                </div>
+                                <div class="project-body">
+                                    <div class="project-head">
+                                        <h3 class="project-title">FillFinder</h3>
+                                        <span class="project-status live">● Live</span>
+                                    </div>
+                                    <p class="project-tagline">Finding ADHD meds during a national shortage.</p>
+                                    <p class="project-desc">During the stimulant shortage, the only way to find a pharmacy that actually has your medication in stock is to call around — shelf-level inventory just isn't public anywhere. FillFinder fixes that: track your run-out dates and call log privately, check live FDA shortage status, and tap into anonymous, crowd-sourced stock reports by location and medication. No account needed — a random device ID keeps your reports yours.</p>
+                                    <div class="project-tags">
+                                        <span class="tag">React 19</span>
+                                        <span class="tag">openFDA</span>
+                                        <span class="tag">Neon</span>
+                                        <span class="tag">PWA</span>
+                                    </div>
+                                    <div class="project-footer">
+                                        <a href="https://meds-tracker-theta.vercel.app" target="_blank" class="project-link primary">Open the live app →</a>
+                                        <a href="https://github.com/RheaPatel/MedsTracker" target="_blank" class="project-link">GitHub ↗</a>
+                                        <span class="project-updated">Updated Jun 2026</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="project-card">
+                                <div class="project-preview" style="--p1:#11998e; --p2:#7ee787;">
+                                    <div class="preview-bar">
+                                        <span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-dot"></span>
+                                        <span class="preview-url">~/nemotron-dgx</span>
+                                    </div>
+                                    <div class="preview-body"><span class="preview-emoji">⚡</span><span class="preview-name">On-device AI</span></div>
+                                </div>
+                                <div class="project-body">
+                                    <div class="project-head">
+                                        <h3 class="project-title">On-device AI — Nemotron + DGX Spark</h3>
+                                        <span class="project-status wip">● In progress</span>
+                                    </div>
+                                    <p class="project-tagline">Post-training a small model to power my apps.</p>
+                                    <p class="project-desc">The AI features across my projects shouldn't all depend on a third-party API. I'm post-training a small NVIDIA Nemotron model on my own DGX Spark to run that integration locally — faster, private, and fully mine. Early days, no public link yet.</p>
+                                    <div class="project-tags">
+                                        <span class="tag">Nemotron</span>
+                                        <span class="tag">DGX Spark</span>
+                                        <span class="tag">Post-training</span>
+                                        <span class="tag">On-device</span>
+                                    </div>
+                                    <div class="project-footer">
+                                        <span class="project-updated">In active development</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="project-card">
+                                <div class="project-preview" style="--p1:#8e2de2; --p2:#c471ed;">
+                                    <div class="preview-bar">
+                                        <span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-dot"></span>
+                                        <span class="preview-url">github.com/RheaPatel/decision-memory</span>
+                                    </div>
+                                    <div class="preview-body"><span class="preview-emoji">🗂️</span><span class="preview-name">decision-memory</span></div>
+                                </div>
+                                <div class="project-body">
+                                    <div class="project-head">
+                                        <h3 class="project-title">decision-memory</h3>
+                                        <span class="project-status">● Open source</span>
+                                    </div>
+                                    <p class="project-tagline">Stop losing the "why" behind your code.</p>
+                                    <p class="project-desc">Every codebase accumulates decisions that aren't obvious from the code — the context lives in PR threads, chat history, and people's heads, and new devs (or AI assistants) end up repeating old mistakes. decision-memory captures architectural choices as living markdown files and surfaces them as advisories right when you edit the relevant code. A nudge, not a blocker — available via CLI, slash commands, and an MCP server.</p>
+                                    <div class="project-tags">
+                                        <span class="tag">TypeScript</span>
+                                        <span class="tag">MCP</span>
+                                        <span class="tag">CLI</span>
+                                    </div>
+                                    <div class="project-footer">
+                                        <a href="https://github.com/RheaPatel/decision-memory" target="_blank" class="project-link primary">GitHub ↗</a>
+                                        <span class="project-updated">Updated Feb 2026</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="project-card">
+                                <div class="project-preview" style="--p1:#5c258d; --p2:#4389a2;">
+                                    <div class="preview-bar">
+                                        <span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-dot"></span>
+                                        <span class="preview-url">github.com/RheaPatel/vs2026-mockup</span>
+                                    </div>
+                                    <div class="preview-body"><span class="preview-emoji">🤖</span><span class="preview-name">vs2026-mockup</span></div>
+                                </div>
+                                <div class="project-body">
+                                    <div class="project-head">
+                                        <h3 class="project-title">vs2026-mockup</h3>
+                                        <span class="project-status">● Open source</span>
+                                    </div>
+                                    <p class="project-tagline">Prototyping the next Copilot Chat.</p>
+                                    <p class="project-desc">A working mockup of Copilot Chat in Visual Studio 2026, wired to the GitHub Copilot SDK — a fast way to prototype and pressure-test agent UX ideas outside the full IDE.</p>
+                                    <div class="project-tags">
+                                        <span class="tag">JavaScript</span>
+                                        <span class="tag">Copilot SDK</span>
+                                    </div>
+                                    <div class="project-footer">
+                                        <a href="https://github.com/RheaPatel/vs2026-mockup" target="_blank" class="project-link primary">GitHub ↗</a>
+                                        <span class="project-updated">Updated Feb 2026</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="project-card">
+                                <div class="project-preview" style="--p1:#373b44; --p2:#4286f4;">
+                                    <div class="preview-bar">
+                                        <span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-dot"></span>
+                                        <span class="preview-url">rhea.dev</span>
+                                    </div>
+                                    <div class="preview-body"><span class="preview-emoji">🖥️</span><span class="preview-name">this site</span></div>
+                                </div>
+                                <div class="project-body">
+                                    <div class="project-head">
+                                        <h3 class="project-title">resume</h3>
+                                        <span class="project-status live">● Live</span>
+                                    </div>
+                                    <p class="project-tagline">This site.</p>
+                                    <p class="project-desc">The terminal-themed portfolio you're reading — hand-built with vanilla HTML, CSS, and JS, no framework.</p>
+                                    <div class="project-tags">
+                                        <span class="tag">HTML</span>
+                                        <span class="tag">CSS</span>
+                                        <span class="tag">JS</span>
+                                    </div>
+                                    <div class="project-footer">
+                                        <a href="https://github.com/RheaPatel/resume" target="_blank" class="project-link primary">GitHub ↗</a>
+                                        <span class="project-updated">Updated Jun 2026</span>
+                                    </div>
+                                </div>
+                            </article>
+
                         </div>
                     </div>
                 </section>
@@ -491,6 +680,7 @@
         <!-- Footer -->
         <div class="terminal-footer">
             <span class="footer-text">Press <kbd>Tab</kbd> to switch files • Made with ☕ and 💜</span>
+            <span class="footer-updated">Last updated June 2026</span>
         </div>
     </div>
 

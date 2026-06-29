@@ -801,6 +801,195 @@ body.light-mode .company-name {
     line-height: 1.5;
 }
 
+/* Request résumé CTA */
+.resume-cta-wrap {
+    margin-top: 1.25rem;
+}
+
+.resume-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--bg-terminal);
+    background: var(--color-highlight);
+    border: 1px solid var(--color-highlight);
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.resume-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(80, 250, 123, 0.25);
+    opacity: 0.95;
+}
+
+/* ===========================
+   Projects gallery
+   =========================== */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+body.light-mode .project-card {
+    background: rgba(0, 0, 0, 0.02);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-function);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+}
+
+/* Faux browser-window preview */
+.project-preview {
+    background: linear-gradient(135deg, var(--p1, #3a7bd5), var(--p2, #00d2ff));
+}
+
+.preview-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 0.75rem;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.preview-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.55);
+}
+
+.preview-url {
+    margin-left: 0.5rem;
+    font-size: var(--text-xs);
+    color: rgba(255, 255, 255, 0.9);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+}
+
+.preview-body {
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.preview-emoji { font-size: 2.75rem; line-height: 1; }
+
+.preview-name {
+    font-size: var(--text-base);
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+.project-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 1.25rem;
+    flex-grow: 1;
+}
+
+.project-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.project-title {
+    font-size: var(--text-lg);
+    font-weight: 700;
+    color: var(--color-function);
+    min-width: 0;
+}
+
+.project-status {
+    font-size: var(--text-xs);
+    color: var(--text-dim);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.project-status.live { color: var(--color-highlight); }
+.project-status.wip { color: var(--color-string); }
+
+.project-tagline {
+    font-size: var(--text-base);
+    color: var(--color-keyword);
+    font-weight: 500;
+}
+
+.project-desc {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    line-height: 1.65;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.25rem;
+}
+
+.project-footer {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    margin-top: auto;
+    padding-top: 0.5rem;
+}
+
+.project-link {
+    font-size: var(--text-sm);
+    color: var(--color-link);
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.project-link.primary { color: var(--color-highlight); }
+.project-link:hover { text-decoration: underline; }
+
+.project-updated {
+    margin-left: auto;
+    font-size: var(--text-xs);
+    color: var(--color-comment);
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
 /* Blog post company sub-headers */
 .work-company {
     font-size: var(--text-lg);
@@ -1463,6 +1652,13 @@ body.light-mode .journey-map {
     padding: 1.5rem;
     color: var(--text-dim);
     font-size: 0.85rem;
+}
+
+.footer-updated {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    color: var(--color-comment);
 }
 
 kbd {
