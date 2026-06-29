@@ -24,6 +24,27 @@ document.addEventListener('DOMContentLoaded', () => {
     
     setTimeout(type, 500);
 
+    // Live GitHub contributions — keeps the count current automatically.
+    // Falls back to the hardcoded number in the markup if the request fails.
+    (async () => {
+        const numberEl = document.querySelector('.contrib-number');
+        const labelEl = document.querySelector('.contrib-label');
+        if (!numberEl) return;
+        const year = new Date().getFullYear();
+        try {
+            const res = await fetch(`https://github-contributions-api.jogruber.de/v4/RheaPatel?y=${year}`);
+            if (!res.ok) return;
+            const data = await res.json();
+            const total = data && data.total && data.total[year];
+            if (typeof total === 'number') {
+                numberEl.textContent = total.toLocaleString();
+                if (labelEl) labelEl.textContent = `contributions in ${year}`;
+            }
+        } catch (e) {
+            /* offline or API down — leave the static fallback in place */
+        }
+    })();
+
     // Tab navigation - smooth scroll to sections
     const tabs = document.querySelectorAll('.tab');
     const sections = document.querySelectorAll('.page-section');

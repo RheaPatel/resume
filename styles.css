@@ -897,6 +897,14 @@ body.light-mode .project-card {
     gap: 0.4rem;
 }
 
+.preview-shot {
+    display: block;
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    object-position: top center;
+}
+
 .preview-emoji { font-size: 2.75rem; line-height: 1; }
 
 .preview-name {
