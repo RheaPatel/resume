@@ -45,6 +45,47 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })();
 
+    // Contact form -> Formspree. Submits via fetch so the page doesn't redirect,
+    // and so my email address never appears anywhere in the page source.
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        const statusEl = document.getElementById('formStatus');
+        const submitBtn = contactForm.querySelector('.form-submit');
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            if (contactForm.action.includes('YOUR_FORM_ID')) {
+                statusEl.textContent = 'Form isn’t hooked up yet — reach me on LinkedIn for now.';
+                statusEl.className = 'form-status error';
+                return;
+            }
+            submitBtn.disabled = true;
+            statusEl.className = 'form-status';
+            statusEl.textContent = 'Sending…';
+            try {
+                const res = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: new FormData(contactForm),
+                    headers: { Accept: 'application/json' }
+                });
+                if (res.ok) {
+                    contactForm.reset();
+                    statusEl.textContent = 'Thanks! Your message is on its way — I’ll be in touch soon.';
+                    statusEl.className = 'form-status success';
+                } else {
+                    const data = await res.json().catch(() => ({}));
+                    statusEl.textContent = (data.errors && data.errors[0] && data.errors[0].message)
+                        || 'Something went wrong — try again or reach me on LinkedIn.';
+                    statusEl.className = 'form-status error';
+                }
+            } catch (err) {
+                statusEl.textContent = 'Network error — try again or reach me on LinkedIn.';
+                statusEl.className = 'form-status error';
+            } finally {
+                submitBtn.disabled = false;
+            }
+        });
+    }
+
     // Tab navigation - smooth scroll to sections
     const tabs = document.querySelectorAll('.tab');
     const sections = document.querySelectorAll('.page-section');
