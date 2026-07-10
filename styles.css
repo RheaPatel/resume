@@ -688,7 +688,7 @@ body:not(.light-mode) .github-chart {
 /* Company grouping (Experience) */
 .company-group {
     /* Strong separation BETWEEN companies */
-    margin-bottom: 5rem;
+    margin-bottom: 3.25rem;
     /* Nest a company's roles under a shared vertical spine */
     padding-left: 1.5rem;
     border-left: 2px solid rgba(255, 255, 255, 0.08);
@@ -1811,7 +1811,6 @@ kbd {
 @media (max-width: 768px) {
     body {
         padding: 0.75rem;
-        padding-top: 3.5rem;
     }
 
     .window-header {
@@ -1835,6 +1834,29 @@ kbd {
     .terminal-content {
         padding: 1rem;
         max-height: none;
+    }
+
+    /* Tighten vertical rhythm on mobile — less scrolling, less dead space */
+    .page-section {
+        margin-top: 1.75rem;
+        padding-top: 1.5rem;
+    }
+
+    .section {
+        margin: 1.25rem 0;
+    }
+
+    .company-group {
+        margin-bottom: 2.5rem;
+        padding-left: 1rem;
+    }
+
+    .company-group .experience-item {
+        margin-bottom: 1rem;
+    }
+
+    .experience-item {
+        padding: 1.25rem;
     }
 
     .profile-section {
@@ -1938,7 +1960,6 @@ kbd {
 @media (max-width: 480px) {
     body {
         padding: 0.5rem;
-        padding-top: 3rem;
     }
 
     .profile-pic {
@@ -1969,13 +1990,30 @@ kbd {
     }
 
     .stat-badge {
-        padding: 1.25rem 1rem;
+        padding: 0.85rem 1rem;
         flex-direction: row;
+        align-items: center;
         justify-content: flex-start;
         text-align: left;
-        gap: 1rem;
+        gap: 0.85rem;
     }
-    
+
+    .stat-badge .badge-icon {
+        font-size: 1.5rem;
+        margin-bottom: 0;
+    }
+
+    .stat-badge .badge-value {
+        font-size: 1.25rem;
+        margin-bottom: 0;
+        white-space: nowrap;
+    }
+
+    .stat-badge .badge-label {
+        flex: 1;
+        min-width: 0;
+    }
+
     .github-chart {
         padding: 0.5rem;
     }

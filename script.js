@@ -6,7 +6,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Typing animation
     const typingText = document.getElementById('typingText');
-    const text = "hi, I'm rhea 👋 NZ-born, AU-raised, SF-based. I'm into food, coffee, skiing, pottery, and EDM. below is a quick look at the work I do in AI + developer tools.";
+    const text = "hi, I'm rhea 👋 NZ-born, AU-raised, SF-based. into food, coffee, skiing & EDM.";
     let index = 0;
     
     function type() {
