@@ -86,6 +86,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Collapse long experience bullet lists behind a "show more" toggle
+    document.querySelectorAll('.exp-list').forEach(list => {
+        const items = [...list.children].filter(el => el.tagName === 'LI');
+        const KEEP = 3;
+        if (items.length <= KEEP) return;
+        const hidden = items.slice(KEEP);
+        hidden.forEach(li => li.classList.add('exp-extra'));
+        const n = hidden.length;
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'show-more-btn';
+        btn.textContent = `+ show ${n} more`;
+        btn.addEventListener('click', () => {
+            const expanded = list.classList.toggle('expanded');
+            btn.textContent = expanded ? '− show less' : `+ show ${n} more`;
+        });
+        list.insertAdjacentElement('afterend', btn);
+    });
+
     // Tab navigation - smooth scroll to sections
     const tabs = document.querySelectorAll('.tab');
     const sections = document.querySelectorAll('.page-section');

@@ -501,6 +501,13 @@ body.light-mode .page-section {
     margin-bottom: 1.5rem;
 }
 
+@media (max-width: 600px) {
+    .ascii-art-small {
+        font-size: 0.4rem;
+        margin-bottom: 1rem;
+    }
+}
+
 /* ===========================
    GitHub Contribution Graph
    =========================== */
@@ -1252,6 +1259,27 @@ body.light-mode .project-card {
     list-style: none;
     padding-left: 0;
     margin: 0;
+}
+
+/* Collapse long bullet lists behind a toggle */
+.exp-list li.exp-extra { display: none; }
+.exp-list.expanded li.exp-extra { display: list-item; }
+
+.show-more-btn {
+    background: none;
+    border: none;
+    color: var(--color-link);
+    font-family: inherit;
+    font-size: var(--text-sm);
+    cursor: pointer;
+    padding: 0.25rem 0;
+    margin: 0.4rem 0 0 2rem;
+    transition: color 0.2s ease;
+}
+
+.show-more-btn:hover {
+    color: var(--color-highlight);
+    text-decoration: underline;
 }
 
 .exp-list li {
